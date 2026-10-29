@@ -8,9 +8,11 @@
 
 保留 stable slide ID，顯示順序與來源 ID 分開。重排時同步章節進度、語言連結、講者備註及來源圖解，不只改頁碼。
 
+操作培訓可採截圖＋側欄，說清楚「看到甚麼 → 先檢查甚麼 → 下一步」。長篇 deck 的入口分流、閱讀模式、搜尋及跳頁，按需要閱讀 [slide-navigation-and-search.md](slide-navigation-and-search.md)；不要求所有短簡報加入控制功能。
+
 ## 動畫
 
-若未另有要求，以講者手動推進為預設建議。流程圖逐步顯示輸入、判斷及輸出；數據表和關鍵數字不靠動畫才可讀。
+先決定是否需要動畫；靜態培訓 deck 也是合理選擇。需要動畫而未另有要求時，以講者手動推進為預設建議。流程圖逐步顯示輸入、判斷及輸出；數據表和關鍵數字不靠動畫才可讀。
 
 - 使用 Reveal 的 fragment / fragment-index，避免改 vendor runtime。
 - 完整測試前進、倒退、跨頁、Show all、關閉動畫和語言切換。
@@ -24,4 +26,6 @@
 
 PDF 必須檢查每張裁切、長中文標題、表格、圖說和頁數。動畫與音訊的意義要有完整靜態圖、文字和附件連結承接。備註可能含內部資料；不要默認把內部備註交付給外部讀者。
 
-隨附瀏覽器工具可匯出靜態 HTML；Reveal 的專用輸出仍應走既有 deck export 流程（例如經測試的 print-pdf 模式），並自行驗證 fragment 與 speaker notes。工具不自動猜測或點擊簡報控制。
+隨附瀏覽器工具可匯出靜態 HTML；Reveal 的專用輸出仍應走既有 deck export 流程（經測試的 print-pdf 或固定 screen-layout export），並自行驗證 fragment 與 speaker notes。不要假定通用列印模式適合全部版面。工具不自動猜測或點擊簡報控制。
+
+如需 PPTX，先看 [office-exports.md](office-exports.md)：預設建議圖片式並明確說明限制；如果要求原生可編輯物件，另選製作流程。從既有 PPTX／DOCX 遷移前，先按 [source-migration-and-reconciliation.md](source-migration-and-reconciliation.md) 指定 baseline 及對照方式。

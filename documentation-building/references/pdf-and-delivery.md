@@ -4,6 +4,8 @@
 
 沿用專案已驗證的 renderer 和 exporter。一般流程是共用資料 → HTML／網站 → PDF → 最終 HTML 內嵌下載（如需要）→ 再建置 → 核對下載檔與交付檔 → 打包。不要讓內嵌 PDF 包含自己而形成無限循環。
 
+主要來源也可直接是 maintained HTML，無需為每個教學文件另建 JSON。若需要 Word／PDF 分頁相符，採 HTML → DOCX → PDF；圖片式 PPTX 則與可選取文字的 PDF 分別由同一 HTML export view 生成。Office 詳見 [office-exports.md](office-exports.md)。
+
 工具不可用時，先說明具體缺項及既有授權，再選可行替代。不要默默安裝依賴、改產品 runtime 或為普通文案變更切換整套技術棧。若選定的插件另有流程要求，依當時有效規範執行。
 
 ## PDF 重點
@@ -59,12 +61,11 @@ python3 <skill>/scripts/test_tools.py
 
 ## 可選瀏覽器工具
 
-需要既有 Node.js、Playwright 1.48+ 及 Chromium；不會安裝或啟動平台。`--playwright-from` 指向已能解析 Playwright 的現有專案目錄，非硬寫依賴版本路徑。
+需要 Node.js、Playwright 及 Chromium；正常使用根目錄 package.json／lockfile 安裝本 repository 的依賴，不需要原海事專案。工具不會自行安裝或啟動平台。`--playwright-from` 是進階選項，可指向另一個已能解析 Playwright 的目錄；具體環境見 [standalone-toolkit.md](standalone-toolkit.md)。
 
 ```sh
 node <skill>/scripts/browser_documentation.mjs \
   --url http://127.0.0.1:<port>/report.html \
-  --playwright-from <existing-project> \
   --output <new-validation-folder> \
   --ready '#method' --pdf true
 ```
@@ -78,13 +79,16 @@ node <skill>/scripts/browser_documentation.mjs \
 可重跑的隔離瀏覽器測試（不連平台、不安裝依賴）：
 
 ```sh
-python3 <skill>/scripts/test_browser.py \
-  --playwright-from <existing-project> --output <new-test-folder>
+python3 <skill>/scripts/test_browser.py --output <new-test-folder>
 ```
 
 它產生雙語報告、手冊與靜態簡報樣本，測試截圖／PDF 成功，以及 overflow 和 POST 被拒絕的失敗情境。這不是完整 Reveal runtime 或生產平台測試；輸出目錄可供人工檢視。
 
 ## 交付前核對
+
+區分兩種雜湊用途：**source fingerprint** 比對輸入是否改變，判斷匯出是否過期；**output manifest** 識別成品 bytes 是否一致。前者可按實際影響鏈包含文字、圖片、CSS、exporter、範本、runtime／lockfile 及工具版本。若只涵蓋選定部分檔案，要照實標示，不宣稱完整可重現。現有 `package_documentation.py` 只做後者，不會自行重建來源依賴圖。
+
+圖片式 PPTX 中的文字不可逐項編輯；DOCX 中的圖片也不會變成 native text。交付說明應逐格式列明限制。需要測試修改能否進入多格式成品時，在暫存副本做一次文字／樣式 smoke edit，不覆寫日常編輯來源。
 
 對外 ZIP 只選必要的 HTML、PDF、已核准附件、媒體、授權及 START_HERE 類閱讀指引；不把資料庫、模型、node_modules、原始備註或封存歷史一起打包。雜湊只能證明一致性，不能證明內容正確。
 

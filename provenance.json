@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-29",
+  "purpose": "Standalone documentation tooling extraction; no original customer documents or media included",
+  "sources": [
+    {
+      "id": "ld-export",
+      "project": "ld-training-library",
+      "path": "docs/20260923/scripts/export-slides.mjs",
+      "sha256": "ab235cdff0ca11770a099691890c247c809812d91deb87413d51ff26ecf2cc37",
+      "scope": "HTML-first element screenshot, image PPTX, separate HTML PDF",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    },
+    {
+      "id": "ld-controls",
+      "project": "ld-training-library",
+      "path": "docs/20260923/scripts/slides.js",
+      "sha256": "24a059f24e58d1918f78fd3be97b16d642659cb69033b730981167bc584dcd3b",
+      "scope": "Reading/presentation position and slide numbering",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    },
+    {
+      "id": "ld-search",
+      "project": "ld-training-library",
+      "path": "docs/20260923/scripts/slide-search.js",
+      "sha256": "ed84c942b8a224fc2c440003d2d8df1771f7bc3e3dced927af9c443797e44e41",
+      "scope": "Local search and keyboard dialog behavior",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    },
+    {
+      "id": "ld-server",
+      "project": "ld-training-library",
+      "path": "docs/20260923/scripts/server.mjs",
+      "sha256": "596674981af57233a47524990001650cee4e6d568164105a0cd80a0a5d18e71a",
+      "scope": "Small loopback static preview",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    },
+    {
+      "id": "ld-office",
+      "project": "ld-training-library",
+      "path": "docs/20260923/scripts/inspect-office.py",
+      "sha256": "0c785fa5fff33f57ce05277c14997b83ed55b2cb29969696244898fb109bc73d",
+      "scope": "Read-only ZIP/XML metrics",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    },
+    {
+      "id": "ld-guide",
+      "project": "ld-training-library",
+      "path": "docs/20260923/scripts/export-guide.mjs",
+      "sha256": "a4f8c334a549993d45f661aa895f8ef1b4e180cfdd01f54a898071f32c84ddeb",
+      "scope": "HTML to DOCX and isolated LibreOffice profile",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    },
+    {
+      "id": "ld-style",
+      "project": "ld-training-library",
+      "path": "docs/20260923/styles/slides.css",
+      "sha256": "8f0c6190d2806f6c603195b5a3576292161498d56b6711cc4eb59cc10dc31640",
+      "scope": "Screenshot/callout and fixed export layout patterns",
+      "source_license": "No new distribution license asserted; retain original ownership"
+    }
+  ],
+  "files": [
+    {
+      "file": "documentation-building/assets/guide/guide.html",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "2b86e7ee7701a288039ccc854bd7fc79a8273a80bbf6fadf623865aa9c5ed7b7"
+    },
+    {
+      "file": "documentation-building/assets/guide/guide.zh-Hant.html",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "35dc9ff6a1d141ea8fb70c1c2dbcc9212f371b151f4c6f54f5fe80d69d7ee4b6"
+    },
+    {
+      "file": "documentation-building/assets/presentation/controls.js",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-controls",
+        "ld-search"
+      ],
+      "sha256": "befe71bdde5860b0fc0ab1b17e63b4e34ff652a992af895e9ac4d71fbd05a5cc"
+    },
+    {
+      "file": "documentation-building/assets/presentation/deck.html",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "5b6cc71a2252740b2c0f4ae6231a034fe3709944c748c654a2a96790945623ac"
+    },
+    {
+      "file": "documentation-building/assets/presentation/deck.zh-Hant.html",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "525d3f191ce413fdfc5fb7e151a1d28f654785c59f6fe8444bdffef3adac61ae"
+    },
+    {
+      "file": "documentation-building/assets/presentation/search.js",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-search"
+      ],
+      "sha256": "fb2bb1c75e08c4e585717a067d8180998b5367e6094c57698cefa21ef584db2a"
+    },
+    {
+      "file": "documentation-building/assets/presentation/styles.css",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-style"
+      ],
+      "sha256": "6b80f81e99320b25f6ac83afd3fa2751a38ee6453be00f7b55471bb55480ed32"
+    },
+    {
+      "file": "documentation-building/scripts/browser_documentation.mjs",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "8f0a2262a4b10d2bc5a1a8f3a78527aa022ce3e9f8b26449266474010facbf75"
+    },
+    {
+      "file": "documentation-building/scripts/check_documentation.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "5edaab7e30be6e21d1443942cab802fb050011027bcec95dc4e96e3bfdc762a0"
+    },
+    {
+      "file": "documentation-building/scripts/create_presentation.mjs",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "44ecae4a82d479193c33741f2f54e41c969fe43d86bde19929d8c760b6a05efc"
+    },
+    {
+      "file": "documentation-building/scripts/doc_common.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "a63c82bac6af6003412b9105c7bc5c0a499dcd393b332f94d08e158e9d0de162"
+    },
+    {
+      "file": "documentation-building/scripts/export_guide.py",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-guide"
+      ],
+      "sha256": "db0788d4a6776af17451cf4a3dcca44276be93b970191b485099fc5d60a32202"
+    },
+    {
+      "file": "documentation-building/scripts/export_presentation.mjs",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-export"
+      ],
+      "sha256": "5c4d931cc9686e643281d2952cec38d842a2e110bb741b4d5bd75444ab9f5b8a"
+    },
+    {
+      "file": "documentation-building/scripts/inspect_office.py",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-office"
+      ],
+      "sha256": "7b836ef3465ed37d66b75f26df459e055445b866f19d20fb1c1504a6cbcc76e5"
+    },
+    {
+      "file": "documentation-building/scripts/inspect_pdf.mjs",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "dc18533b9d8363d3e539655399003509044c94217ff5693ee45c5625314303b1"
+    },
+    {
+      "file": "documentation-building/scripts/package_documentation.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "650b148eb8e98f6ebe5331855d7014f0352f8357b9b6c754ade1e224be626a75"
+    },
+    {
+      "file": "documentation-building/scripts/presentation_common.mjs",
+      "kind": "adapted",
+      "source_ids": [
+        "ld-server"
+      ],
+      "sha256": "cebec0f2d68c32614efeaa791995522509aa011c7a92bef1e4defe849d05516a"
+    },
+    {
+      "file": "documentation-building/scripts/test_browser.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "ff027ce4c3ea5d2ad802ef62943b2074a0f554764eb1d7b31f817887d9c039c3"
+    },
+    {
+      "file": "documentation-building/scripts/test_tools.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "e8a4f1adce8795c29ac8298ced66a243070539954e41240f7b67bbc3088bd49a"
+    },
+    {
+      "file": "documentation-building/scripts/verify_bundle.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "de947a04a1a43bd17d55444aeb00774294db6e47f9d469462021bc4af3f78900"
+    },
+    {
+      "file": "documentation-building/scripts/waveform.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "e0a381133654e7f64732e92607f4cf635014635b23c37d9e3688dc35e34fa031"
+    },
+    {
+      "file": "tests/guide.test.mjs",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "cdeef73622f8aed37956427d412a35e0fbb090a5a9c0b1caf30e6d057930944b"
+    },
+    {
+      "file": "tests/presentation.test.mjs",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "7143613a0e0278bc4cc40f4bcde0a9ad52575b61b5170b1150c497ade633ebc5"
+    },
+    {
+      "file": "tests/search.test.mjs",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "2471c993ef1002d9ce7be84987e8fb70a62ce07f44728ddcce06dfc7b2b45701"
+    },
+    {
+      "file": "tests/test_office.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "edf4432856a676a80590a5286915d193b1f1090ca4b74dd939876e0abd770ecd"
+    },
+    {
+      "file": "tests/test_waveform.py",
+      "kind": "authored-for-this-skill",
+      "source_ids": [],
+      "sha256": "ad2e205e405c43a04c0eeca5890fe27ec0e1c1fd4da9dfed51c2bef3835c380e"
+    }
+  ],
+  "adaptations": [
+    "Removed project roots, customer branding and fixed titles",
+    "CJK substring search and opt-in approved notes",
+    "Relationship-based Office notes and absent-notes handling",
+    "Explicit output paths, input/output hashes and loopback-only browser requests"
+  ],
+  "third_party": {
+    "policy": "Installed from package-lock; node_modules is not committed. Generated presentations copy Reveal runtime with its MIT license.",
+    "packages": {
+      "playwright": "1.63.0",
+      "pptxgenjs": "4.0.1",
+      "reveal.js": "5.2.1",
+      "pdfjs-dist": "5.4.624"
+    }
+  },
+  "historical_reference_policy": "External project indexes are optional historical context, not execution dependencies."
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-10-29",
+  "passed": true,
+  "strategy": "Isolated copy of this repository with its own npm ci --ignore-scripts; no original maritime/LD code or data needed by test commands",
+  "provenance_sha256": "aa3028cbcd548d2de0817aa6dc645f67e1e2cdf11110c3830582861ed0086932",
+  "dependency_lock_sha256": "ae4e74a58dc009cb48a14c920bcb29386649fbad31b48ae6b18c85c2620908d1",
+  "environment": {
+    "platform": "Darwin",
+    "node": "v24.18.0",
+    "python_core_tests": [
+      "3.9",
+      "3.12"
+    ],
+    "browsers": "Playwright-managed Chromium already installed on host",
+    "fonts": "host system fonts",
+    "word_converters": "installed Pandoc and LibreOffice"
+  },
+  "checks": [
+    {
+      "name": "bundle provenance, links and lockfile",
+      "result": "passed",
+      "code_hashes": 26,
+      "documentation_links_at_core_test": 35
+    },
+    {
+      "name": "Python core, Office and waveform tests",
+      "result": "passed",
+      "cases": 22
+    },
+    {
+      "name": "search tests",
+      "result": "passed",
+      "cases": 8
+    },
+    {
+      "name": "real Reveal integration",
+      "result": "passed",
+      "navigation_cases": 4,
+      "export_cases": 3,
+      "source_edit_reached_exports": true,
+      "scope": "HTTP/file access, bilingual controls, mobile reading, fragments, approved notes and PDF text"
+    },
+    {
+      "name": "static browser fixtures",
+      "result": "passed",
+      "cases": 6,
+      "server_post_requests": 0
+    },
+    {
+      "name": "optional guide exporters",
+      "result": "passed",
+      "languages": [
+        "en",
+        "zh-Hant"
+      ],
+      "scope": "native DOCX text/table, DOCX-derived PDF, expected text and hashes"
+    },
+    {
+      "name": "waveform CLI example",
+      "result": "passed",
+      "synthetic_non_speech": true,
+      "duration_s": 4
+    },
+    {
+      "name": "provenance drift rejection",
+      "result": "passed"
+    },
+    {
+      "name": "Skill Creator quick_validate.py",
+      "result": "passed",
+      "validation_only_dependency": "PyYAML 6.0.3 in temporary Python 3.12 venv"
+    },
+    {
+      "name": "sampled visual review",
+      "result": "passed",
+      "scope": "English cover, Traditional Chinese results and process slides, mobile reading, Traditional Chinese DOCX-derived PDF"
+    }
+  ],
+  "limitations": [
+    "No Microsoft PowerPoint, Word or Keynote application import was performed in this revision",
+    "Visual review sampled the synthetic fixtures; not a review of production platforms or original customer reports",
+    "PDF required-text comparisons use NFKC and whitespace normalization; original PDF/text are not rewritten",
+    "Word output requires separately installed Pandoc/LibreOffice; dependencies and browser installation may need network access"
+  ]
+}

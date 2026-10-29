@@ -48,7 +48,9 @@ table{{width:100%;border-collapse:collapse}}td,th{{padding:12px;border:1px solid
             folder = output / filename.replace('.', '-')
             command = [args.node, str(Path(__file__).with_name('browser_documentation.mjs')),
                        '--url', f'http://127.0.0.1:{server.server_port}/{filename}',
-                       '--playwright-from', args.playwright_from, '--output', str(folder)]
+                       '--output', str(folder)]
+            if args.playwright_from:
+                command.extend(['--playwright-from', args.playwright_from])
             if filename in labels:
                 command.extend(['--ready', '#method', '--pdf', 'true'])
             if args.chromium:
@@ -81,7 +83,7 @@ table{{width:100%;border-collapse:collapse}}td,th{{padding:12px;border:1px solid
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--playwright-from', required=True)
+    parser.add_argument('--playwright-from', help='Optional dependency override; default uses this skill repository')
     parser.add_argument('--node', default='node')
     parser.add_argument('--chromium')
     parser.add_argument('--output', help='New directory for inspectable fixtures/results; otherwise temporary')

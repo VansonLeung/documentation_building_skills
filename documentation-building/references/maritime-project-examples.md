@@ -1,6 +1,8 @@
 # 海事專案實例索引
 
-以下路徑相對於本 repository 根目錄；本索引檢視日期為 **2026-10-29**。檔案留在原處，技能不複製報告、音訊、第三方 runtime 或資料庫。不把來源路徑變成跨專案必要依賴。
+以下路徑相對於**原海事專案 checkout 根目錄**，不是本獨立技能 repository；本索引檢視日期為 **2026-10-29**。它們是可選的歷史實例，單獨 checkout 本技能時不預期存在。報告、真實音訊及資料庫留在原處。
+
+可執行的獨立工具與合成範本見 [standalone-toolkit.md](standalone-toolkit.md)，不需要原海事目錄。
 
 先定位 `codes/v18/maritime_vhf_navigator/codes/v1/test-results/`，下稱 `T`。
 

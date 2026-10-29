@@ -6,6 +6,8 @@
 
 以共用 navigation 定義網站和 PDF 章節順序；雙語使用相同頁名及 anchor IDs。不要讓建置腳本用歷史設計文件覆蓋當前手冊。
 
+若 HTML 是已確認的主要編輯來源，直接維護 HTML 亦可；共用 navigation 可由 headings 生成。從舊 DOCX／PPTX 遷移，見 [source-migration-and-reconciliation.md](source-migration-and-reconciliation.md)。需要可編輯 Word 和同次分頁一致的 PDF，見 [office-exports.md](office-exports.md)，不要把 Word styles 當成瀏覽器 CSS 的自然延伸。
+
 ## 擷取流程
 
 1. 核對當前版本、路由、預覽服務及授權範圍。沿用已有截圖工具；無需為截圖重跑模型。

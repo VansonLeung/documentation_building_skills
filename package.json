@@ -1,0 +1,21 @@
+{
+  "name": "documentation-building-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "check": "python3 documentation-building/scripts/verify_bundle.py",
+    "create:presentation": "node documentation-building/scripts/create_presentation.mjs",
+    "export:presentation": "node documentation-building/scripts/export_presentation.mjs",
+    "test:python": "python3 documentation-building/scripts/test_tools.py && python3 tests/test_office.py && python3 tests/test_waveform.py",
+    "test:guide": "node tests/guide.test.mjs",
+    "test": "npm run check && npm run test:python && node --test tests/search.test.mjs && node tests/presentation.test.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.63.0",
+    "pptxgenjs": "4.0.1",
+    "reveal.js": "5.2.1",
+    "pdfjs-dist": "5.4.624"
+  }
+}
