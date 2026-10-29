@@ -1,0 +1,4 @@
+interface:
+  display_name: "文件製作與交付"
+  short_description: "Build bilingual reports, manuals and slides"
+  default_prompt: "使用 $documentation-building 整理來源，製作雙語文件，並驗證 PDF、HTML 及交付附件。"
